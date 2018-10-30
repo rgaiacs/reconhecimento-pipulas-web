@@ -1,0 +1,21 @@
+{% extends "demo/base.html" %}
+
+{% block content %}
+{% if image %}
+
+<h2>Input</h2>
+
+<img src="data:image/{{ image_extension }};base64,{{ image_str }}" alt="Input image" />
+
+<h2>Output</h2>
+
+<p>Unknow</p>
+
+{% else %}
+
+No image provided.
+
+{% include "demo/form.html" %}
+
+{% endif %}
+{% endblock %}

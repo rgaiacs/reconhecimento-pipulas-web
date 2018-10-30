@@ -1,0 +1,40 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Labvis</title>
+    <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" type="image/vnd.microsoft.icon" />
+
+    <!-- Begin CSS block -->
+
+    <!-- Custom -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+
+    {% block extra_css %}{% endblock %}
+    <!-- End CSS block -->
+
+    <!-- Begin Javascript block -->
+    {% block extra_js %}{% endblock %}
+    <!-- End Javascript block -->
+
+    {{ form.media }}
+  </head>
+  <body>
+    <h1>Pill Recognition</h1>
+
+    {% block content %}{% endblock %}
+
+    <p class="text-muted text-center">Powered with
+      <a href="http://python.org/">Python 3</a>,
+      <a href="http://djangoproject.com/">Django</a>.
+      <br>
+      Running version {{ settings.VERSION }}
+      from <a href="{{ settings.URL_SRC }}">{{ settings.URL_SRC }}</a>.
+    </p>
+</div>
+{% block extra_js_body %}{% endblock %}
+</body>
+</html>
