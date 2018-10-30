@@ -1,5 +1,9 @@
 # Reconhecimento Pipulas (web)
 
+## Dependencias
+
+- Python 3
+
 ## Instalacão
 
 ```
@@ -18,3 +22,5 @@ $ python manage.py migrate
 ```
 $ python manage.py runserver
 ```
+
+Visite http://localhost:8000/demo/.
